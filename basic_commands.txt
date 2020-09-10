@@ -1,0 +1,31 @@
+1) Deploy an application on the cluster
+	- kubectl run hello-minikube
+
+2) Get details about the cluster
+	- kubectl cluster-info
+
+3) List all the nodes that are part of the cluster
+	- kubectl get nodes
+
+4) After setting up the minikube, we can use the folowing commands
+	- minikube start --driver=virtualbox
+	
+	- minikube status
+	
+	- kubectl get nodes
+	
+	- kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
+	
+	- kubectl get deployments
+	
+	
+	- kubectl expose deployment hello-minikube --type=NodePort --port=8080
+	
+	This will display the url which will list the details of the application
+	- minikube service hello-minikube --url
+	
+	- kubectl delete services hello-minikube
+	
+	- kubectl delete deployment hello-minikube
+	
+	- kubectl get pods
