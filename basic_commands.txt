@@ -35,3 +35,5 @@
 	- kubectl delete deployment hello-minikube
 	
 	- kubectl get pods
+
+6) kubectl get all

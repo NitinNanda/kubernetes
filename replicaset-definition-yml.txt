@@ -29,3 +29,4 @@ spec:
 	-kubectl scale --replicas=6 -f replicaset-definition.yml
 2) - kubectl get replicaset
    - kubectl delete replicaset myapp-replicaset
+   - kubectl describe replicaset myapp-replicaset

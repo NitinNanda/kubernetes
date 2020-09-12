@@ -1,0 +1,5 @@
+kubectl create -f deployment.yaml
+
+kubectl describe deployment myapp-deployment
+
+kubectl delete deployment nginx
