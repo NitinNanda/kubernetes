@@ -1,0 +1,13 @@
+1) Create a new pod with the NGINX image
+	- kubectl run nginx --image=nginx
+2) How many pods are there ?
+	- kubectl get pods
+3) What is the image used to create the new pods?
+	- kubectl describe pod newpods-6stbt
+4) How many containers are part of the pod 'webapp'?
+	- kubectl describe pod webapp
+	and count under the section 'containers'
+5) Delete the 'webapp' Pod.
+	- kubectl delete pod webapp
+6) Create a new pod from pod.yaml
+	- kubectl apply -f pod.yaml

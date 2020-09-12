@@ -1,0 +1,26 @@
+apiVersion: v1/'apps/v1'
+kind: Pod/ReplicaSet/Deployment/Service
+metadata:
+	name: myapp-pod
+	labels:
+		app: myapp
+		type: front-end
+spec:
+	containers:
+		- name: nginx-container
+		  image: nginx
+		  
+
+
+
+
+1) To create the pod using the yaml file, run
+	- kubectl create -f pod-definition.yml
+2) Description about the pod
+	- kubectl describe pod myapp-pod
+3) Create a pod using the yaml file
+	-  kubectl apply -f pod.yaml
+   You can also use the create commands instead of apply
+   -  kubectl create -f pod.yaml
+   
+   Here, the -f flag is the filename flag

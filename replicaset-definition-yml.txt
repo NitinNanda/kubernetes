@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+	name: myapp-replicaset
+	labels:
+		app: myapp
+		type: frontend
+spec:
+	template:
+		metadata: 
+			name: nginx
+			labels:
+				app: nginx
+				type: frontend
+		spec:
+			containers:
+				- name: nginx
+				  image: nginx
+	replicas: 3
+	selector: 
+		matchLabels:
+			type: frontend
+			
+			
+1) How to scale the application, i.e. increase the number of replicas	
+	(after updating the replicas count in the file)
+	- kubectl replace -f replicaset-definition.yml
+	Or
+	-kubectl scale --replicas=6 -f replicaset-definition.yml
+2) - kubectl get replicaset
+   - kubectl delete replicaset myapp-replicaset

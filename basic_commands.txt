@@ -6,8 +6,14 @@
 
 3) List all the nodes that are part of the cluster
 	- kubectl get nodes
+	
+	List of pods in the cluster
+	- kubectl get pods
 
-4) After setting up the minikube, we can use the folowing commands
+4) Check details of the nodes
+	- kubectl get nodes -o wide
+
+5) After setting up the minikube, we can use the folowing commands
 	- minikube start --driver=virtualbox
 	
 	- minikube status
