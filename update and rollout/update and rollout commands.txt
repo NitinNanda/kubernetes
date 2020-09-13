@@ -1,0 +1,16 @@
+1) kubectl rollout status deployment/myapp-deployment
+
+2) kubectl rollout history deployment/myapp-deployment
+
+3) During an updagrade, kubernetes deployment object will create a new replica set 
+   and add new pods to this replica set and simultaneously taking down pods from the old replica set. This is rolling update strategy.
+   
+4) - kubectl rollout undo deployment/myapp-deployment
+   - kubectl rollout status deployment.apps/myapp-deployment
+   - kubectl rollout history deployment.apps/myapp-deployment
+   - kubectl create -f deployment.yaml --record
+it records the change cause
+   - kubectl describe deployment myapp-deployment
+   - kubectl edit deployment myapp-deployment --record
+   - kubectl rollout status deployment.apps/myapp-deployment
+   - kubectl rollout undo deployment/myapp-deployment
