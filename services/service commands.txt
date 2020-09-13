@@ -1,0 +1,6 @@
+1) kubectl create -f service-definition.yaml
+
+2) kubectl get service
+
+3)  minikube(name of the node) service myapp-service --url
+    This command is used to get the url on which the application is running
